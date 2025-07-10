@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngene Emmanuel - Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="site-header fixed w-full z-10 main-background custom-shadow py-4 px-4 md:px-8 rounded-b-lg">
+        <nav class="nav-container container mx-auto flex justify-between items-center">
+            <!-- Enhanced Dark Mode Toggle -->
+            <button id="theme-toggle" class="theme-toggle">
+                <svg id="sun-icon" class="theme-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <svg id="moon-icon" class="theme-toggle-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+                <span id="theme-text" class="theme-toggle-text">Light Mode</span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="desktop-nav hidden md:flex space-x-6">
+                <a href="#about-section" class="nav-link secondary-text hover:text-blue-600 font-medium transition-colors duration-200">About</a>
+                <a href="#skills-section" class="nav-link secondary-text hover:text-blue-600 font-medium transition-colors duration-200">Skills</a>
+                <a href="#projects-section" class="nav-link secondary-text hover:text-blue-600 font-medium transition-colors duration-200">Projects</a>
+                <a href="#contact-section" class="nav-link secondary-text hover:text-blue-600 font-medium transition-colors duration-200">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn md:hidden secondary-text focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2" id="mobile-menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="mobile-overlay hidden md:hidden fixed inset-0 main-background bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="close-btn absolute top-6 right-6 secondary-text focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#about-section" class="mobile-nav-link text-3xl primary-text hover:text-blue-600 font-semibold py-3">About</a>
+            <a href="#skills-section" class="mobile-nav-link text-3xl primary-text hover:text-blue-600 font-semibold py-3">Skills</a>
+            <a href="#projects-section" class="mobile-nav-link text-3xl primary-text hover:text-blue-600 font-semibold py-3">Projects</a>
+            <a href="#contact-section" class="mobile-nav-link text-3xl primary-text hover:text-blue-600 font-semibold py-3">Contact</a>
+        </div>
+    </header>
+
+    <main class="main-content pt-20">
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero-banner py-20 md:py-32 main-background text-center">
+            <div class="hero-container container mx-auto px-4">
+                <h1 class="hero-title text-5xl md:text-6xl font-extrabold leading-tight mb-4 primary-text">
+                    Hi, I'm <span class="accent-text">NGENE EMMANUEL</span>!
+                </h1>
+                <p class="hero-subtitle text-2xl md:text-3xl mb-8 secondary-text">
+                    A passionate <span class="font-semibold">BACKEND DEVELOPER</span> building amazing things.
+                </p>
+                <a href="#projects-section" class="cta-button inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
+                    View My Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="about-section py-16 md:py-24 secondary-background">
+            <div class="about-container container mx-auto px-4 flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="profile-image-wrapper md:w-1/3 mb-8 md:mb-0">
+                    <img src="image/WhatsApp Image 2025-07-09 at 15.43.21_996048bd.jpg" alt="Ngene Emmanuel Profile Photo" class="profile-image w-full h-auto rounded-full shadow-lg border-4 border-blue-200 object-cover">
+                </div>
+                <div class="about-content md:w-2/3 text-center md:text-left">
+                    <h2 class="section-title text-5xl font-bold primary-text mb-8">About Me</h2>
+                    <p class="about-description text-xl secondary-text leading-relaxed mb-6">
+                        Hello! I'm Ngene Emmanuel, a Backend Engineer with 1 year of experience in Software Engineering. I specialize in Api design, server-side development, and Database Management.
+                    </p>
+                    <p class="about-description text-xl secondary-text leading-relaxed">
+                        My passion lies in creating efficient, scalable, and user-friendly solutions. I love tackling complex problems and bringing ideas to life through code and design. When I'm not coding, you can find me playing Tennis or vacationing.
+                    </p>
+                    <a href="#contact-section" class="connect-button mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills-section" class="skills-section py-16 md:py-24 main-background">
+            <div class="skills-container container mx-auto px-4 text-center">
+                <h2 class="section-title text-5xl font-bold primary-text mb-12">My Skills</h2>
+                <div class="skills-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="skill-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                        <div class="skill-icon text-5xl mb-4 text-blue-500">💻</div>
+                        <h3 class="skill-title text-xl font-semibold primary-text mb-2">Web Development</h3>
+                        <p class="skill-description secondary-text text-base">HTML, CSS, JavaScript, typescript, NodeJS, Express Framework</p>
+                    </div>
+                    <div class="skill-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                        <div class="skill-icon text-5xl mb-4 text-green-500">🗄️</div>
+                        <h3 class="skill-title text-xl font-semibold primary-text mb-2">Database Mgmt</h3>
+                        <p class="skill-description secondary-text text-base">MongoDB</p>
+                    </div>
+                    <div class="skill-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                        <div class="skill-icon text-5xl mb-4 text-red-500">🌳</div>
+                        <h3 class="skill-title text-xl font-semibold primary-text mb-2">Version Control</h3>
+                        <p class="skill-description secondary-text text-base">Git, GitHub, GitLab</p>
+                    </div>
+                    <div class="skill-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                        <div class="skill-icon text-5xl mb-4 text-orange-500">📜</div>
+                        <h3 class="skill-title text-xl font-semibold primary-text mb-2">Scripting</h3>
+                        <p class="skill-description secondary-text text-base">Python, Bash, PowerShell</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects-section" class="projects-section py-16 md:py-24 secondary-background">
+            <div class="projects-container container mx-auto px-4 text-center">
+                <h2 class="section-title text-5xl font-bold primary-text mb-12">My Projects</h2>
+                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Cards -->
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/digital wsak.png" alt="Digital Calculator Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Digital Calculator</h3>
+                        <p class="project-description secondary-text text-base mb-6">A simple digital calculator app!</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://digital-clock-program-tawny.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Live Demo</a>
+                            <a href="https://github.com/Emmy-py/calculator-program" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/stopwatch.png" alt="Stop Watch Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Stop Watch</h3>
+                        <p class="project-description secondary-text text-base mb-6">A stop watch that helps you set timer for your activities</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://stop-watch-ivory-pi.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Live Demo</a>
+                            <a href="https://github.com/Emmy-py/stop-watch" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/manco.png" alt="Manco Art Studio Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Manco Art Studio</h3>
+                        <p class="project-description secondary-text text-base mb-6">Replication of Figma file</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://manco-art-studio.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Visit Site</a>
+                            <a href="https://github.com/Emmy-py/manco-Art-studio" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">Code Here</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/forster.png" alt="Forster Bakery Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Forster Bakery</h3>
+                        <p class="project-description secondary-text text-base mb-6">Replication of Figma file</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://forster-s-backery-7zo7.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Visit Site</a>
+                            <a href="https://github.com/Emmy-py/forster-s-backery" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">Code Here</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/temp converter.png" alt="Temperature Converter Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Temperature Converter</h3>
+                        <p class="project-description secondary-text text-base mb-6">It converts from fahrenheit to celsius and vice versa</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://tempreture-converter-tawny.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Live Demo</a>
+                            <a href="https://github.com/Emmy-py/tempreture-converter" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card card-background p-6 rounded-lg custom-shadow hover:shadow-lg transition-shadow duration-300">
+                        <img src="image/dice roler.png" alt="Dice Roller Game Project" class="project-image w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="project-title text-xl font-semibold primary-text mb-2">Dice Roller</h3>
+                        <p class="project-description secondary-text text-base mb-6">Dice roller game</p>
+                        <div class="project-links flex justify-center space-x-4">
+                            <a href="https://dice-roller-sage-six.vercel.app/" class="demo-button inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">Play Game</a>
+                            <a href="https://github.com/Emmy-py/dice-roller-" class="code-button inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-400 transition-colors">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="contact-section py-16 md:py-24 main-background">
+            <div class="contact-container container mx-auto px-4 text-center">
+                <h2 class="section-title text-5xl font-bold primary-text mb-12">Say Hello</h2>
+                <p class="contact-intro text-xl secondary-text mb-8 max-w-2xl mx-auto">
+                    Want to chat or work together? Send me a message or connect with me on social media!
+                </p>
+
+                <!-- Social Media Buttons -->
+                <div class="social-buttons flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="https://www.linkedin.com/in/emmanuel-ngene-708337263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
+                       target="_blank" 
+                       class="linkedin-button social-button bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-700 transition-all duration-300 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+
+                    <a href="https://x.com/_devemmy?s=21" 
+                       target="_blank" 
+                       class="twitter-button social-button bg-black text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-800 transition-all duration-300 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M15.751 2.75h2.302l-5.025 5.745L18.5 17.25h-4.633l-3.622-4.735-4.143 4.735H1.469l5.375-6.142L1.5 2.75h4.75l3.275 4.33 3.776-4.33zm-.808 13.05h1.275L6.25 4.07H4.875l10.068 11.73z"/>
+                        </svg>
+                        <span>Message on Twitter</span>
+                    </a>
+
+                    <a href="https://github.com/Emmy-py" 
+                       target="_blank" 
+                       class="github-button social-button bg-gray-800 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-700 transition-all duration-300 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>View GitHub</span>
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form max-w-xl mx-auto secondary-background p-8 rounded-lg custom-shadow">
+                    <div class="form-group mb-6 text-left">
+                        <label for="user-name" class="form-label block primary-text text-base font-bold mb-2">Your Name:</label>
+                        <input type="text" id="user-name" name="user-name" class="form-input shadow appearance-none border rounded w-full py-3 px-4 primary-text leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Your Name">
+                    </div>
+                    <div class="form-group mb-6 text-left">
+                        <label for="user-email" class="form-label block primary-text text-base font-bold mb-2">Your Email:</label>
+                        <input type="email" id="user-email" name="user-email" class="form-input shadow appearance-none border rounded w-full py-3 px-4 primary-text leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group mb-6 text-left">
+                        <label for="user-message" class="form-label block primary-text text-base font-bold mb-2">Your Message:</label>
+                        <textarea id="user-message" name="user-message" rows="6" class="form-textarea shadow appearance-none border rounded w-full py-3 px-4 primary-text leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="What do you want to say?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-gray-800 text-white py-8 text-center">
+        <div class="footer-container container mx-auto px-4">
+            <p class="copyright-text text-lg">&copy; 2025 Ngene Emmanuel. All rights reserved.</p>
+            <div class="footer-links flex justify-center space-x-6 mt-4">
+                <a href="https://www.linkedin.com/in/emmanuel-ngene-708337263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="footer-link text-gray-400 hover:text-blue-400 transition-colors text-base">LinkedIn</a>
+                <a href="https://github.com/Emmy-py" class="footer-link text-gray-400 hover:text-blue-400 transition-colors text-base">GitHub</a>
+                <a href="https://x.com/_devemmy?s=21" class="footer-link text-gray-400 hover:text-blue-400 transition-colors text-base">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
